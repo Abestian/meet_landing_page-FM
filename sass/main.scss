@@ -1,3 +1,28 @@
 @use './reset' as *;
 @use './colors' as *;
 @use './typography' as *;
+
+// nav - logo
+.navigation {
+	margin: 5.1em;
+	.logo {
+		text-align: center;
+
+		&--hidden {
+			font-size: 0;
+		}
+	}
+}
+
+// header
+.header {
+	.hero {
+		margin-top: -9em;
+		display: flex;
+		justify-content: center;
+		align-items: flex-start;
+		gap: 1.7em;
+		width: 100vw;
+		scale: 0.525;
+	}
+}

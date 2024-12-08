@@ -44,4 +44,24 @@ textarea {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+.navigation {
+  margin: 5.1em;
+}
+.navigation .logo {
+  text-align: center;
+}
+.navigation .logo--hidden {
+  font-size: 0;
+}
+
+.header .hero {
+  margin-top: -9em;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1.7em;
+  width: 100vw;
+  scale: 0.525;
 }/*# sourceMappingURL=main.css.map */
