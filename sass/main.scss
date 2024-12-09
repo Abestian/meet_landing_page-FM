@@ -10,7 +10,8 @@
 }
 
 body {
-	overflow: hidden;
+	overflow-x: hidden;
+	background-color: $white;
 }
 
 .text-wrapper {

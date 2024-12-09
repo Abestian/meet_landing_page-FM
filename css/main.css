@@ -47,7 +47,8 @@ table {
 }
 
 body {
-  overflow: hidden;
+  overflow-x: hidden;
+  background-color: #fafafa;
 }
 
 .text-wrapper {
