@@ -64,8 +64,8 @@
 			max-width: fit-content;
 			color: $white;
 			border-radius: 29px;
-			outline: none;
 			transition: background-color 0.3s;
+			outline: none;
 
 			&--btn-1 {
 				background-color: $cyanDarker;
@@ -94,9 +94,15 @@
 	}
 }
 
+.section {
+	@include flex-column();
+	gap: 6.4em;
+}
+
+// guide "arrows"
 .guide {
 	position: relative;
-	margin: calc(6.4em + 80px) auto 6.4em;
+	margin: calc(6.4em + 80px) auto 0;
 	padding: 16px 19px;
 	max-width: fit-content;
 	border: 1px solid $slateLighter;
@@ -116,3 +122,50 @@
 		background-color: $slateLighter;
 	}
 }
+
+// photo collage
+.image-collage {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	gap: 1.6em;
+
+	.image {
+		border-radius: 8px;
+		overflow: hidden;
+		img {
+			width: 100%;
+			height: 100%;
+		}
+	}
+}
+
+// section text
+.section {
+	.text {
+		text-align: center;
+		&__title {
+			@include flex-column();
+			margin-bottom: 2.125em;
+
+			&--small {
+				@include text-preset-three();
+				margin-bottom: 1.35em;
+				text-transform: uppercase;
+				color: $cyanDarker;
+			}
+
+			&--big {
+				@include text-preset-two();
+				color: $slateVeryDark;
+			}
+		}
+
+		&__content {
+			@include text-preset-four();
+			color: $slateDarker;
+		}
+	}
+}
+
+
