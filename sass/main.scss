@@ -28,14 +28,17 @@
 
 // header
 .header {
-	margin-top: -9em;
-	overflow-x: hidden;
-	.hero {
-		margin-bottom: -2em;
-		display: flex;
-		justify-content: center;
-		gap: 1.7em;
-		scale: 0.525;
+	width: 100vw;
+	overflow: hidden;
+	.hero__image--left {
+		width: calc(100% + 40px);
+		margin: 0 -20px 2em;
+		height: 160px;
+		text-align: center;
+		background-image: url('../assets/tablet/image-hero.png');
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position-x: center;
 	}
 
 	.text {
@@ -231,11 +234,12 @@
 
 @media (width > 576px) {
 	.header {
-		margin-top: 6.4em;
-		.hero {
-			margin-bottom: 7.2em;
-			gap: 3.2em;
-			scale: 1;
+		width: 100vw;
+		overflow: hidden;
+		.hero__image--left {
+			margin: 0 -20px 5em;
+			height: 350px;
+			background-image: url('../assets/tablet/image-hero.png');
 		}
 
 		.text {
@@ -310,6 +314,50 @@
 }
 
 @media (width > 1200px) {
+	.header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 2em;
+		width: 100vw;
+		overflow: hidden;
+		.hero__image {
+			width: calc(100% + 40px);
+			height: 300px;
+			text-align: center;
+			background-repeat: no-repeat;
+			background-size: contain;
+			background-position-x: center;
+		}
+
+		.hero__image--left {
+			order: 1;
+			margin: 0 0 2em -100px;
+			background-image: url('../assets/desktop/image-hero-left.png');
+		}
+
+		.hero__image--right {
+			order: 3;
+			margin: 0 -100px 2em 0;
+			background-image: url('../assets/desktop/image-hero-right.png');
+		}
+
+		.text {
+			order: 2;
+
+			&__title {
+				@include text-preset-one-desktop();
+				max-width: 550px;
+			}
+
+			&__description {
+				@include text-preset-four-desktop();
+				width: 100%;
+				min-width: 500px;
+			}
+		}
+	}
+
 	.image-collage {
 		max-width: 1200px;
 	}
@@ -332,31 +380,30 @@
 			}
 		}
 	}
-}
+	.footer {
+		.footer-hero {
+			padding: 11.2rem 0;
+			background-image: url('../assets/desktop/image-footer.jpg');
 
-.footer {
-	.footer-hero {
-		padding: 11.2rem 0;
-		background-image: url('../assets/desktop/image-footer.jpg');
+			.text {
+				flex-direction: row;
+				justify-content: space-between;
+				align-items: flex-start;
+				text-align: start;
 
-		.text {
-			flex-direction: row;
-			justify-content: space-between;
-			align-items: flex-start;
-			text-align: start;
+				&__title {
+					@include text-preset-two-desktop();
+					max-width: 350px;
+				}
 
-			&__title {
-				@include text-preset-two-desktop();
-				max-width: 350px;
-			}
+				&__description {
+					@include text-preset-four-desktop();
+					max-width: 350px;
+				}
 
-			&__description {
-				@include text-preset-four-desktop();
-				max-width: 350px;
-			}
-
-			&__cta-button {
-				min-width: max-content;
+				&__cta-button {
+					min-width: max-content;
+				}
 			}
 		}
 	}
