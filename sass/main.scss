@@ -46,7 +46,8 @@
 
 		&__title {
 			@include text-preset-one();
-			padding: 0 0.25em;
+			margin: 0 auto;
+			max-width: 280px;
 			color: $slateVeryDark;
 		}
 
@@ -160,6 +161,7 @@
 
 			&--big {
 				@include text-preset-two();
+				max-width: 450px;
 				color: $slateVeryDark;
 			}
 		}
@@ -222,6 +224,139 @@
 				span {
 					color: $purpleLighter;
 				}
+			}
+		}
+	}
+}
+
+@media (width > 576px) {
+	.header {
+		margin-top: 6.4em;
+		.hero {
+			margin-bottom: 7.2em;
+			gap: 3.2em;
+			scale: 1;
+		}
+
+		.text {
+			&__title {
+				@include text-preset-one-tablet();
+				max-width: 350px;
+			}
+
+			&__description {
+				margin: 0 auto;
+				width: 90%;
+				max-width: 400px;
+			}
+		}
+
+		.buttons {
+			display: flex;
+			flex-direction: row;
+		}
+	}
+
+	.section {
+		.guide {
+			margin: calc(6.4em + 5.6em + 80px) auto 0;
+		}
+
+		.text {
+			margin: 0 auto;
+			&__title {
+				&--small {
+					@include text-preset-three-tablet();
+				}
+
+				&--big {
+					@include text-preset-two-tablet();
+					max-width: 450px;
+				}
+			}
+
+			&__content {
+				@include text-preset-four();
+				margin: 0 auto;
+				max-width: 500px;
+			}
+		}
+	}
+
+	.footer {
+		.footer-hero {
+			background-image: url('../assets/tablet/image-footer.jpg');
+
+			.text {
+				&__title {
+					@include text-preset-two-tablet();
+				}
+
+				&__description {
+					margin: 0 auto;
+					max-width: 500px;
+				}
+			}
+		}
+	}
+}
+
+@media (width > 768px) {
+	.image-collage {
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		grid-template-rows: none;
+		gap: 2.4em;
+	}
+}
+
+@media (width > 1200px) {
+	.image-collage {
+		max-width: 1200px;
+	}
+
+	.section {
+		.text {
+			&__title {
+				&--small {
+					@include text-preset-three-desktop();
+				}
+
+				&--big {
+					@include text-preset-two-desktop();
+				}
+			}
+
+			&__content {
+				@include text-preset-four-desktop();
+				max-width: 550px;
+			}
+		}
+	}
+}
+
+.footer {
+	.footer-hero {
+		padding: 11.2rem 0;
+		background-image: url('../assets/desktop/image-footer.jpg');
+
+		.text {
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: flex-start;
+			text-align: start;
+
+			&__title {
+				@include text-preset-two-desktop();
+				max-width: 350px;
+			}
+
+			&__description {
+				@include text-preset-four-desktop();
+				max-width: 350px;
+			}
+
+			&__cta-button {
+				min-width: max-content;
 			}
 		}
 	}
