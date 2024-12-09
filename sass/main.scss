@@ -95,3 +95,26 @@
 		}
 	}
 }
+
+.guide {
+	position: relative;
+	margin: calc(6.4em + 80px) auto 6.4em;
+	padding: 16px 19px;
+	max-width: fit-content;
+	border: 1px solid $slateLighter;
+	border-radius: 50%;
+	&__number {
+		@include text-preset-five;
+		color: $slateDarker;
+	}
+
+	&::before {
+		content: '';
+		position: absolute;
+		bottom: 100%;
+		left: 50%;
+		width: 1px;
+		height: 80px;
+		background-color: $slateLighter;
+	}
+}
