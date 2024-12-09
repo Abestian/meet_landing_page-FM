@@ -8,30 +8,71 @@
 	letter-spacing: 0px;
 }
 
+// mobile
 @mixin text-preset-one {
-	@include font-base();
-	font-size: 6.4rem;
-}
-
-@mixin text-preset-two {
 	@include font-base();
 	font-size: 4rem;
 }
 
+@mixin text-preset-two {
+	@include font-base();
+	font-size: 3.2rem;
+}
+
 @mixin text-preset-three {
 	@include font-base();
-	font-size: 1.6rem;
+	font-size: 1.2rem;
 	letter-spacing: 4px;
 }
 
 @mixin text-preset-four {
 	@include font-base();
 	font-weight: 500;
-	font-size: 1.8rem;
+	font-size: 1.6rem;
 }
 
 @mixin text-preset-five {
 	@include font-base();
 	font-size: 1.6rem;
 	line-height: 150%;
+}
+
+// tablet
+@mixin text-preset-one-tablet {
+	@include font-base();
+	font-size: 4.8rem;
+}
+
+@mixin text-preset-two-tablet {
+	@include font-base();
+	font-size: 3.6rem;
+}
+
+@mixin text-preset-three-tablet {
+	@include font-base();
+	font-size: 1.4rem;
+	letter-spacing: 4px;
+}
+
+// desktop
+@mixin text-preset-one-desktop {
+	@include font-base();
+	font-size: 6.4rem;
+}
+
+@mixin text-preset-two-desktop {
+	@include font-base();
+	font-size: 4rem;
+}
+
+@mixin text-preset-three-desktop {
+	@include font-base();
+	font-size: 1.6rem;
+	letter-spacing: 4px;
+}
+
+@mixin text-preset-four-desktop {
+	@include font-base();
+	font-weight: 500;
+	font-size: 1.8rem;
 }

@@ -47,13 +47,11 @@
 			@include text-preset-one();
 			padding: 0 0.25em;
 			color: $slateVeryDark;
-			font-size: 4rem;
 		}
 
 		&__description {
 			@include text-preset-four();
 			color: $slateDarker;
-			font-size: 1.6rem;
 		}
 	}
 
