@@ -2,6 +2,18 @@
 @use './colors' as *;
 @use './typography' as *;
 
+@mixin flex-column {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.text-wrapper {
+	margin: 0 auto;
+	width: 80%;
+}
+
 // nav - logo
 .navigation {
 	margin: 5.1em;
@@ -18,11 +30,68 @@
 .header {
 	.hero {
 		margin-top: -9em;
+		margin-bottom: -2em;
 		display: flex;
 		justify-content: center;
-		align-items: flex-start;
 		gap: 1.7em;
-		width: 100vw;
 		scale: 0.525;
+	}
+
+	.text {
+		display: flex;
+		flex-direction: column;
+		gap: 2.4rem;
+		text-align: center;
+
+		&__title {
+			@include text-preset-one();
+			padding: 0 0.25em;
+			color: $slateVeryDark;
+			font-size: 4rem;
+		}
+
+		&__description {
+			@include text-preset-four();
+			color: $slateDarker;
+			font-size: 1.6rem;
+		}
+	}
+
+	.buttons {
+		@include flex-column();
+		gap: 1.6em;
+		.button {
+			@include text-preset-five;
+			padding: 16px 40px;
+			max-width: fit-content;
+			color: $white;
+			border-radius: 29px;
+			outline: none;
+			transition: background-color 0.3s;
+
+			&--btn-1 {
+				background-color: $cyanDarker;
+
+				span {
+					color: $cyanLighter;
+				}
+
+				&:hover,
+				&:focus,
+				&:active {
+					background-color: #71c0d4;
+				}
+			}
+
+			&--btn-2 {
+				background-color: $purpleDarker;
+
+				&:hover,
+				&:focus,
+				&:active {
+					background-color: #b28bdd;
+				}
+			}
+		}
 	}
 }
