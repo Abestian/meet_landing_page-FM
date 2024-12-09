@@ -46,6 +46,10 @@ table {
   border-spacing: 0;
 }
 
+body {
+  overflow: hidden;
+}
+
 .text-wrapper {
   margin: 0 auto;
   width: 80%;
